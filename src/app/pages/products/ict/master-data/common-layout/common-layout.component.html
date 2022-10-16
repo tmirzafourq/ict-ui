@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md-12" >
+            <p-card [header]="headerName">                
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 text-start">
+                        <!-- dynamic no. of dropdowns -->
+                        <span class="col-md-2 me-2" *ngFor="let i of data" >
+                            <p-dropdown [options]="i" optionLabel="name"></p-dropdown>
+                        </span>
+                    </div>
+                    <div class="col-sm-12 col-md-6 text-end">
+                        <button pButton label="Apply" class="primary-action-button" (click)="showDialog()"></button>
+                        <button pButton label="Reset" class="secondary-action-button p-button-secondary p-button-outlined"></button>
+                    </div>
+                 </div>                 
+            </p-card>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-md-12 mt-2 overflow-auto">
+            <p-card>
+                <h4>Table toolbar (filter/sort/asc/desc)</h4>
+                <!-- temporary data table -->
+                <!-- <ag-grid-angular 
+                    style="height: 500px;"
+                    [rowData]="rowData | async"
+                    [columnDefs]="columnDefs"
+                    class="ag-theme-material"
+                    [pagination]="true"
+                    [paginationPageSize]="5">
+                </ag-grid-angular> -->
+                <app-file-upload></app-file-upload>
+                
+            </p-card>
+        </div>
+    </div>
+</div>
+
+
+<p-dialog [(visible)]="display">
+    <i class="fa fa-info-circle" aria-hidden="true"></i>
+    The Legal Entity information you are about to edit is associated with an order record/invoice. Would you like to proceed?
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <button pButton label="Yes" class="primary-action-button"></button>
+            <button pButton label="No" class="secondary-action-button p-button-secondary p-button-outlined"></button>
+        </div>
+    </div>
+</p-dialog>
+

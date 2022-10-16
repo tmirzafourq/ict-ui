@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/index.scss';
+@import './assets/styles/colors.scss';
+
+/* Styles for AgGrid table*/
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-material.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+global and common components:
+1. Buttons
+2. Dropdowns
+3. Containers
+*/
+
+// remove left padding from all containers-fluid used accross the application
+.container-fluid {
+    padding-left: 0px !important;
+}
+
+// standardize title of every card accross the application
+.p-card-title {
+    font-family: $bl-ic-header;
+    font-weight: 700;
+    font-size: $font-size-large;
+    color: $bl-ic-black;
+}
+
+// standardize every dropdown's width used accross the application
+.p-dropdown {
+    height: 36px;
+    width: 140px;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
+// standardize every dropdown's inner text accross the application
+.p-dropdown-label {
+    font-family: $bl-ic-dropdown-items-text;
+    font-weight: 400;
+    font-size: $font-size-small;
+    color: $bl-ic-gray;
+    padding-top: 5px !important;
+}
+
+// button styling accross the application
+.primary-action-button {
+    background: $bl-ic-purple-400 !important;
+    border: 1px solid $bl-ic-purple-600 !important;
+    &:hover{
+        background: $bl-ic-purple-600  !important;
+    }
+}
+
+.primary-action-button,
+.secondary-action-button {
+    color: $bl-ic-white;
+    height: 36px;
+    margin: 2px 5px 2px 5px !important;
+    font-family: $bl-ic-header  !important;
+}
+
+/* File upload component*/
+.ngx-file-drop {
+    &__content {
+        color: $bl-ic-black !important;
+        font-family: $bl-ic-header;
+    }
+    &__drop-zone {
+        margin: auto;
+        border: 2px dotted $bl-ic-nuetral-400 !important;
+        border-radius: 5px !important;
+    }
+}
+
+.p-progressbar {
+    height: 1rem !important;
+    margin-top: 5px !important;
+    .p-progressbar-value {
+        background: $bl-ic-purple-400 !important;
+    }
+}
+
+.p-progress-spinner {
+    width: 20px !important;
+    height: 30px !important;
+}

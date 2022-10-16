@@ -1,0 +1,43 @@
+@import '../../../assets/styles/index.scss';
+
+.sublevel-nav {
+    list-style: none;
+    margin-left: 10px;
+    .sublevel-nav-item {
+        .sublevel-nav-link {
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            color: $bl-ic-std-shadow;
+            text-decoration: none;
+            border-radius: 0.625rem;
+            transition: all .3s ease;
+            .sublevel-link-icon {
+                display: none;
+                font-size: 4px;
+                width: 2rem;
+                min-width: 2rem;
+                margin: 0 0.5rem;
+                text-align: center;
+            }
+            .sublevel-link-text {
+                margin-left: 2.5rem;
+            }
+            .menu-collapse-icon {
+                font-size: $font-size-small-medium-1;
+                width: 2rem;
+                min-width: 2rem;
+                margin: auto 0.5rem auto auto;
+                text-align: center;
+                color: $bl-ic-white;
+            }
+        }
+        .sublevel-nav-link:hover {
+            color: $bl-ic-white;
+        }
+    }
+}
+
+.active-sublevel {
+    color: $bl-ic-white;
+}

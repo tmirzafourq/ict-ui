@@ -1,0 +1,16 @@
+@import '../../../assets/styles/font-faces.scss';
+@import '../../../assets/styles/colors.scss';
+
+.navbar {
+    box-shadow: 0px 1px $bl-ic-std-shadow;
+    &__container-fluid {
+        &__navbar-brand {
+            &--blackline-logo {
+                height: 50px;
+            }
+        }
+        &__utility-panel {
+            font-family: $bl-ic-header;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import '../assets/styles/index.scss';
+
+.container-fluid {
+    &__row {
+        &--side-menubar {
+            background:  $bl-ic-std-background;
+            position: fixed;
+            padding-left: $padding-5;
+        }
+        &--router-content {
+            background: $bl-ic-std-background;
+            padding-left: 0px;
+            width: 100%;
+        }
+    }
+}

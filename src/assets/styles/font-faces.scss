@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "IBM Plex Sans";
+    src: local("IBM Plex Sans"), url(../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf) format("truetype");
+}
+
+$bl-ic-header: 'IBM Plex Sans', sans-serif;
+$bl-ic-dropdown-items-text: 'Open Sans', sans-serif;

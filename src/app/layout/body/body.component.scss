@@ -1,0 +1,31 @@
+@import '../../../assets/styles/colors.scss';
+@import '../../../assets/styles/space.scss';
+
+.container-fluid {
+    &__row {
+        &__body-col {
+            &--body {
+                background: $bl-ic-std-background;
+                width: calc(100% - 4rem);
+                height: $bl-ic-std-height;
+                margin-left: 5rem;
+                z-index: 0;
+                position: fixed;
+                top: 1;
+                transition: all .5s ease;           
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+/* dynamic styling with directive [ngClass]="getBodyClass()" */
+.body-trimmed {
+    width: calc(100% - 20.5625rem);
+    margin-left: 19.5625rem;
+}
+
+.body-md-screen {
+    width: calc(68% - 3rem);
+    margin-left: 20rem;
+}

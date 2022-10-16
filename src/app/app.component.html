@@ -1,0 +1,16 @@
+ <div class="container-fluid">
+  <div class="row container-fluid__row sticky-top">
+    <div class="col-lg">
+      <app-navbar></app-navbar>
+    </div>
+  </div>
+  <div class="row container-fluid__row">
+    <div class="col-sm-1 container-fluid__row--side-menubar">
+      <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+    </div>
+    <div class="col-sm-11 container-fluid__row--router-content">
+      <app-body [collapsed]="isSideNavCollpased" [screenWidth]="screenWidth">
+      </app-body>
+    </div>
+  </div>
+</div>
